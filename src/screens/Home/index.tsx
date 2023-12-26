@@ -72,7 +72,7 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    backgroundColor: COLORS.text,
+    backgroundColor: COLORS.white,
   },
   button: {
     flex: 1,
@@ -102,6 +102,6 @@ const styles = StyleSheet.create({
   photographer: {
     paddingHorizontal: 10,
     paddingVertical: 7,
-    color: COLORS.text,
+    color: COLORS.white,
   },
 });

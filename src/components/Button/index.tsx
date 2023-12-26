@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   text: {
-    color: COLORS.text,
+    color: COLORS.white,
     textTransform: 'uppercase',
   },
 });

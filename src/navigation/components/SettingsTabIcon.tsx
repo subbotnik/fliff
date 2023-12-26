@@ -11,7 +11,7 @@ export const SettingsTabIcon = ({focused}: Props) => {
     <SettingsIcon
       width={24}
       height={24}
-      color={focused ? COLORS.text : COLORS.main}
+      color={focused ? COLORS.white : COLORS.main}
     />
   );
 };

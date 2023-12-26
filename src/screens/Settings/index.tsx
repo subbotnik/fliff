@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   deviceId: {
-    color: COLORS.text,
+    color: COLORS.white,
   },
 });

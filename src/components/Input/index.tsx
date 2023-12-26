@@ -31,7 +31,7 @@ export const CommonInput = ({
         <TextInput
           value={value}
           placeholder={'Your nickname'}
-          placeholderTextColor={COLORS.textOpacity}
+          placeholderTextColor={COLORS.whiteOpacity}
           style={styles.input}
           autoCorrect={false}
           autoComplete={'off'}
@@ -49,19 +49,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     paddingHorizontal: 0,
     paddingVertical: 0,
-    color: COLORS.text,
+    color: COLORS.white,
   },
   inputContainer: {
     paddingTop: 10,
     paddingBottom: 12,
     paddingHorizontal: 10,
     borderRadius: 20,
-    borderColor: COLORS.text,
+    borderColor: COLORS.white,
     borderWidth: 1,
     marginVertical: 10,
   },
   text: {
-    color: COLORS.text,
+    color: COLORS.white,
     textTransform: 'uppercase',
   },
 });

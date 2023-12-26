@@ -11,7 +11,7 @@ export const HomeTabIcon = ({focused}: Props) => {
     <HomeIcon
       width={40}
       height={40}
-      color={focused ? COLORS.text : COLORS.main}
+      color={focused ? COLORS.white : COLORS.main}
     />
   );
 };

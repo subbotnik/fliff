@@ -47,13 +47,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingHorizontal: 10,
     paddingVertical: 10,
-    color: COLORS.text,
+    color: COLORS.white,
   },
   photographer: {
     paddingTop: 40,
     paddingBottom: 10,
     paddingHorizontal: 10,
     textAlign: 'right',
-    color: COLORS.text,
+    color: COLORS.white,
   },
 });
