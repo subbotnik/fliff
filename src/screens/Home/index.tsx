@@ -36,13 +36,17 @@ export const HomeScreen = () => {
     [navigation],
   );
 
+  const keyExtractor = useCallback(
+    (item: PhotoDetails, index: number) => `${item.id}_${index}`,
+    [],
+  );
+
   const renderItem = useCallback(
-    ({item}: {item: PhotoDetails}) => {
+    ({item}: {item: PhotoDetails; index: number}) => {
       return (
         <TouchableOpacity
           activeOpacity={0.9}
           onPress={() => onPress(item.id)}
-          key={item.id}
           style={styles.button}>
           <View style={styles.imageContainer}>
             <FastImage source={{uri: item.src.medium}} style={styles.image} />
@@ -63,6 +67,7 @@ export const HomeScreen = () => {
         onEndReached={loadNext}
         onRefresh={refresh}
         refreshing={refreshing}
+        keyExtractor={keyExtractor}
         ListEmptyComponent={<ActivityIndicator color={COLORS.secondary} />}
       />
     </SafeAreaView>
