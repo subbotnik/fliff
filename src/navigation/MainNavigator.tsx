@@ -11,7 +11,7 @@ import {SettingsTabIcon} from './components/SettingsTabIcon';
 
 export type MainNavigatorParamList = {
   Main: TabNavigatorParamList;
-  Details: {photoId: string};
+  Details: {photoId: string; title: string};
 };
 
 export type TabNavigatorParamList = {
@@ -54,11 +54,24 @@ export const TabNavigator = () => {
 };
 export const MainNavigator = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{headerShown: false}}
-      initialRouteName="Main">
-      <Stack.Screen name="Main" component={TabNavigator} />
-      <Stack.Screen name="Details" component={DetailsScreen} />
+    <Stack.Navigator initialRouteName="Main">
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Main"
+        component={TabNavigator}
+      />
+      <Stack.Screen
+        name="Details"
+        options={({route}) => ({
+          title: route.params.title,
+          headerStyle: {
+            backgroundColor: COLORS.main,
+          },
+          headerTintColor: '#fff',
+          headerBackTitleVisible: false,
+        })}
+        component={DetailsScreen}
+      />
     </Stack.Navigator>
   );
 };

@@ -30,8 +30,11 @@ export const HomeScreen = () => {
   }, [fetch, photos.length]);
 
   const onPress = useCallback(
-    (photoId: number) => {
-      navigation.navigate('Details', {photoId: photoId.toString()});
+    (item: PhotoDetails) => {
+      navigation.navigate('Details', {
+        photoId: item.id.toString(),
+        title: item.photographer,
+      });
     },
     [navigation],
   );
@@ -46,7 +49,7 @@ export const HomeScreen = () => {
       return (
         <TouchableOpacity
           activeOpacity={0.9}
-          onPress={() => onPress(item.id)}
+          onPress={() => onPress(item)}
           style={styles.button}>
           <View style={styles.imageContainer}>
             <FastImage source={{uri: item.src.medium}} style={styles.image} />
