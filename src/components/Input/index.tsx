@@ -1,29 +1,14 @@
 import {COLORS} from '@constants/colors';
 import React from 'react';
-import {
-  StyleProp,
-  StyleSheet,
-  Text,
-  TextInput,
-  TextInputProps,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 
-export type CommonInputProps = TextInputProps & {
+export type CommonInputProps = {
   label: string;
+  onChangeText: (text: string) => void;
   value: string;
-  loading?: boolean;
-  onValueChange?: (v: string) => void;
-  onChange?: () => void;
-  containerStyle?: StyleProp<ViewStyle>;
 };
 
-export const CommonInput = ({
-  value,
-  label,
-  onValueChange,
-}: CommonInputProps) => {
+export const CommonInput = ({value, label, onChangeText}: CommonInputProps) => {
   return (
     <View>
       <Text style={styles.text}>{label}</Text>
@@ -37,7 +22,7 @@ export const CommonInput = ({
           autoComplete={'off'}
           autoCapitalize={'none'}
           spellCheck={false}
-          onChangeText={onValueChange}
+          onChangeText={onChangeText}
         />
       </View>
     </View>

@@ -21,7 +21,7 @@ export const LoginScreen = () => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      <CommonInput label={'nickname'} value={value} onValueChange={setValue} />
+      <CommonInput label={'nickname'} value={value} onChangeText={setValue} />
       <CommonButton text={'login'} onPress={login} />
     </SafeAreaView>
   );

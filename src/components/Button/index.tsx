@@ -1,23 +1,13 @@
 import {COLORS} from '@constants/colors';
 import React from 'react';
-import {
-  StyleProp,
-  StyleSheet,
-  Text,
-  TextInputProps,
-  TouchableOpacity,
-  ViewStyle,
-} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-export type CommonInputProps = TextInputProps & {
+export type CommonButtonProps = {
   text: string;
   onPress: () => void;
-  loading?: boolean;
-  onChange?: () => void;
-  containerStyle?: StyleProp<ViewStyle>;
 };
 
-export const CommonButton = ({onPress, text}: CommonInputProps) => {
+export const CommonButton = ({onPress, text}: CommonButtonProps) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{text}</Text>
