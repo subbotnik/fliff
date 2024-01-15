@@ -1,3 +1,5 @@
+# hi Roman! i didn't managed twitter api because of authentication and I used [Pexels api](https://www.pexels.com/api/documentation/) instead of that and implemented a basic app with some core libs which i usualy use in the projects from scratch. Since i don't have user id for settings screen, i've used device id - i've used [react-native-device-info](https://github.com/react-native-device-info/react-native-device-info) for that. Also I have used next libs: redux for state management, redux-persist and @react-native-async-storage/async-storage to persist data, redux-saga like a middleware for sideeffects, react-navigation for navigation, axios for api requests, react-native-fast-image to cache images
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
